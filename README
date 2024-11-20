@@ -1,0 +1,62 @@
+Overview
+This repository contains the User Authentication Microservice designed to securely manage user registration, login, and session handling. The microservice communicates via a REST API, providing a seamless interface for integrating with other systems.
+
+Communication Contract
+How to Request Data
+To interact with the microservice, other programs should make HTTP requests to the following endpoints:
+
+Register Endpoint
+
+URL: /register
+Method: POST
+Request Body:
+json
+Copy code
+{
+  "username": "exampleUser",
+  "password": "securePassword123"
+}
+Description: Registers a new user with the provided username and password. The password is securely hashed before storage.
+Login Endpoint
+
+URL: /login
+Method: POST
+Request Body:
+json
+Copy code
+{
+  "username": "exampleUser",
+  "password": "securePassword123"
+}
+Description: Authenticates the user and returns a session token along with user information.
+How to Receive Data
+The microservice provides JSON responses based on the success or failure of requests:
+
+Register Response
+
+json
+Copy code
+{
+  "status": "success",
+  "message": "User registered successfully"
+}
+Login Response
+
+json
+Copy code
+{
+  "status": "success",
+  "token": "abcdef123456",
+  "user": {
+    "username": "exampleUser",
+    "preferences": {}
+  }
+}
+In case of errors, the microservice responds with an error status and message:
+
+json
+Copy code
+{
+  "status": "error",
+  "message": "Invalid credentials"
+}
