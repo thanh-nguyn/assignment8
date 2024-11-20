@@ -1,5 +1,6 @@
 Overview
-This repository contains the User Authentication Microservice designed to securely manage user registration, login, and session handling. The microservice communicates via a REST API, providing a seamless interface for integrating with other systems.
+This repository contains the User Authentication Microservice designed to securely manage user registration, login, and session handling. 
+The microservice communicates via a REST API, providing a seamless interface for integrating with other systems.
 
 Communication Contract
 How to Request Data
